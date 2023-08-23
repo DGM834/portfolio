@@ -1,14 +1,170 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>This is Daniel's webpage!</title>
-    <style>
-      body {
-        background-color: lightpurple;
-      }
-    </style>
-  </head>
-  <body>
-    <p>I'm Groot</p>
-  </body>
+<head>
+
+
+<title>Daniel Park | Student Page </title>
+
+	<meta charset="UTF-8">
+		<meta name="description" content="Daniel's Student Page">
+		<meta name="keywords" content="HTML, CSS, Python, Responsive, Daniel">
+		<meta name="author" content="Daniel">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+	body {
+		margin: 0px;
+		font-family: "Louis George Cafe",Ariel,sans-serif;
+	}
+	img
+
+	{
+		width: auto;
+		height:  100px;
+	}
+
+	strong
+	{
+		background-color: #F26b8a
+		color:  white;
+		text-align:  center;
+		padding:  5px 5px;
+	}
+
+		#container {
+			width: 800px;
+			margin: 0 auto;
+		}
+		#row1 {
+			text-align: center;
+			background-color: #6f7d99;
+			color:  white;
+			padding: 5px;
+		}
+
+		#row2{
+			background-color: #becedd;
+		}
+
+		#row3{
+			background-color: #d8e5ed;
+		}
+
+
+		.col1 {
+			float: left;
+			width: 360px;
+			height: auto;
+			padding: 10px 20px;
+		}	
+
+		.col2 {
+			float: right;
+			width: 360px;
+			height: 100%;
+
+			padding: 10px 20px;
+		}
+
+	.clearfloat{
+		clear:  both;
+	}
+
+	.profile {
+			float: left;
+			border: 3px solid white;
+			margin: 5px;
+			height: auto;
+			width: 250px;
+			overflow: hidden;
+		}
+
+		@media(max-width: 767px) {
+		
+		img {
+			height: auto;
+			width: 50%;
+		}
+		#container {
+			width: 70%;
+			margin: 0 auto;
+			background-color: #82DCFA;
+			text-align: left;
+		}
+		
+		.col1 {
+			float: none;
+			width: 90%;
+		}	
+		.col2 {
+			float: none;
+			width: 90%;
+		}
+		.activity {
+			float: none;
+		}
+		}
+
+</style>
+
+</head>
+<body>
+
+<div id="container">
+	<div id="row1">
+			<!-- h1 tag -->
+		<h1>Daniel Park</h1>
+
+		<!-- setup mailto: link -->
+		<p><a href="danipark2929@gmail.com">danipark2929@gmail.com</a></p>
+	</div>
+
+	<div class="clearfloat"></div>
+
+
+	<div id="row2">
+		<div class="col1">
+			<p>High School: <strong>Blah High School</strong></p>
+			<p>Career Interests: <strong>Data Scientist, Doctor, Blah</strong> </p>
+
+			<!-- h2 tag -->
+			<h3>Profile Picture</h3>
+
+			<!-- img tag -->
+			<img class="profile" src="profile.png" alt="Tennis" />
+		</div>
+
+		<div class="col2">
+			<!-- h3 tag -->
+			<h3>About Me</h3>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. </p>
+		</div>
+		<div class="clearfloat"></div>
+	</div>
+
+
+
+	<div id="row3">
+		<div class="col1">
+			<!-- h3 tag -->
+			<h3>Projects</h3>
+			<ul>
+				<li><a href="https://uscwebdev.github.io/itp104-submissions-jojosaladd/assignment01" target="_blank">Project 01: Blah </a></li>
+
+				<li><a href="https://uscwebdev.github.io/itp104-submissions-jojosaladd/assignment02" target="_blank">Project 02: Blah </a></li>
+
+				<li><a href="https://uscwebdev.github.io/itp104-submissions-jojosaladd/assignment03" target="_blank">Project 03: Blah </a></li>
+
+				<li><a href="https://uscwebdev.github.io/itp104-submissions-jojosaladd/assignment04" target="_blank">Project 04: Blah </a></li>
+
+			</ul>
+
+		</div>	
+
+		<div class="clearfloat"></div>
+
+	</div>	
+
+</body>
 </html>
