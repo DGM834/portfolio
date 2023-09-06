@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>Daniel Park | Student Page </title>
+
+	<meta charset="UTF-8">
+		<meta name="description" content="Daniel's Student Page">
+		<meta name="keywords" content="HTML, CSS, Python, Responsive, Daniel">
+		<meta name="author" content="Daniel">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+	body {
+		margin: 0px;
+		font-family: "Louis George Cafe",Ariel,sans-serif;
+	}
+
+	h2{
+		color: darkslateblue;
+	}
+	h3{
+		color: darkslateblue;
+	}
+	img
+
+	{
+		width: auto;
+		height:  100px;
+	}
+
+	strong
+	{
+		background-color: #F26b8a
+		color:  white;
+		text-align:  center;
+		padding:  5px 5px;
+	}
+
+		#container {
+			width: 800px;
+			margin: 0 auto;
+		}
+		#row1 {
+			text-align: center;
+			background-color: #6f7d99;
+			color:  white;
+			padding: 5px;
+		}
+
+		#row2{
+			background-color: #becedd;
+			padding: 10px;
+		}
+
+		#row3{
+			background-color: #d8e5ed;
+		}
+
+
+		.col1 {
+			float: left;
+			width: 360px;
+			height: auto;
+			padding: 10px 20px;
+		}	
+
+		.col2 {
+			float: right;
+			width: 360px;
+			height: 100%;
+
+			padding: 10px 20px;
+		}
+
+	.clearfloat{
+		clear:  both;
+	}
+
+	.profile {
+			float: left;
+			border: 3px solid white;
+			margin: 5px;
+			height: auto;
+			width: 250px;
+			overflow: hidden;
+		}
+
+		@media(max-width: 767px) {
+		
+		img {
+			height: auto;
+			width: 50%;
+		}
+		#container {
+			width: 70%;
+			margin: 0 auto;
+			background-color: #82DCFA;
+			text-align: left;
+		}
+		
+		.col1 {
+			float: none;
+			width: 90%;
+		}	
+		.col2 {
+			float: none;
+			width: 90%;
+		}
+		.activity {
+			float: none;
+		}
+		}
+
+</style>
+
+</head>
+<body>
+
+<div id="container">
+	<div id="row1">
+			<!-- h1 tag -->
+		<h1>Project 01: Cafe Simulation</h1>
+
+	</div>
+
+	<div class="clearfloat"></div>
+
+
+	<div id="row2">
+			<h2>Project Description:</h2>
+				<p>My project is a cafe simulation that provides the user with a variety of foods to choose from the cafe menu; the menu consists of 5 dishes from Korea, Japan, Italy, Mexico, and America. The goal is to see what kinds of foods users prefer. </p>
+
+			<div style="height:300px;width:auto;overflow:auto;background-color:#404040	;color:white;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+				<pre>print( 
+""" ___       __   _______   ___       ________  ________  _____ ______   _______      
+|\  \     |\  \|\  ___ \ |\  \     |\   ____\|\   __  \|\   _ \  _   \|\  ___ \     
+\ \  \    \ \  \ \   __/|\ \  \    \ \  \___|\ \  \|\  \ \  \\\__\ \  \ \   __/|    
+ \ \  \  __\ \  \ \  \_|/_\ \  \    \ \  \    \ \  \\\  \ \  \\|__| \  \ \  \_|/__  
+  \ \  \|\__\_\  \ \  \_|\ \ \  \____\ \  \____\ \  \\\  \ \  \    \ \  \ \  \_|\ \ 
+   \ \____________\ \_______\ \_______\ \_______\ \_______\ \__\    \ \__\ \_______\
+    \|____________|\|_______|\|_______|\|_______|\|_______|\|__|     \|__|\|_______|
+                                                                                    
+"""
+)
+Korean = ["Bibimbap", "Bulgogi", "Tteokbokki", "Samgyeopsal", "Naengmyon"]
+Japanese = ["Chankonabe", "Sunomono", "Kushiage", "Hosomaki", "Yokohama-Style Ramen"]
+Italian = ["Risotto", "Pizza", "Lasagna", "Gnocchi", "Ribollita"]
+Mexican = ["Chorizo", "Carne Asada", "Lenguado", "Carnitas", "Pollo Asada"] #they are all tacos 
+American = ["Hamburger", "Hot Dog", "Chicken Tenders", "French Fries", "Apple Pie"]
+
+again = True
+
+while(again):
+    preference = input("What kind of food do you prefer to eat? ")
+    print(preference, "is a great choice!")
+    
+    if preference.upper() == "KOREAN":
+        print(Korean)
+        korean_menu = input("Please select one of the following dishes on the menu: ")
+        print(korean_menu)
+        if korean_menu == "Bibimbap":
+            print("맛있게 드세요😛")
+        elif korean_menu == "Bulgogi":
+            print("맛있게 드세요🥱")
+        elif korean_menu == "Tteokbokki":
+            print("맛있게 드세요🥵")
+        elif korean_menu =="Samgyeopsal":
+            print("맛있게 드세요😋")
+        elif korean_menu == "Naengmyon":
+            print("맛있게 드세요🥶")
+        else:
+            print("That is not a real dish.")
+    elif preference == "Japanese":
+        print(Japanese)
+        korean_menu = input("Please select one of the following dishes on the menu: ")
+        print(korean_menu)
+        if korean_menu == "Chankonabe":
+            print("お食事をお楽しみください!💪")
+        elif korean_menu == "Sunomono":
+            print("お食事をお楽しみください!🥒")
+        elif korean_menu == "Kushiage":
+            print("お食事をお楽しみください!😊")
+        elif korean_menu == "Hosomaki":
+            print("お食事をお楽しみください!😓")
+        elif korean_menu == "Yokohama-style Ramen":
+            print("お食事をお楽しみください!🍜")
+    elif preference == "Italian":
+        print(Italian)
+        question = input("Please select one of the following dishes on the menu: ")
+    
+        print(question)
+        if question == "Risotto":
+            print("Si prega di godere il vostro pasto!🧀")
+        elif question == "Pizza":
+            print("Si prega di godere il vostro pasto!")
+        elif question == "Lasagna":
+            print("Si prega di godere il vostro pasto!")
+        elif question == "Gnocchi":
+            print("Si prega di godere il vostro pasto!")
+        elif question == "Ribollita":
+            print("Si prega di godere il vostro pasto!")
+    elif preference == "Mexican":
+        print(Mexican)
+        question = input("Please select one of the following dishes on the menu: ")
+    
+        print(question)
+        if question =="Chorizo":
+            print("¡Por favor, disfrute de su comida!")
+        elif question == "Carne Asada":
+            print("¡Por favor, disfrute de su comida!")
+        elif question == "Languado":
+            print("¡Por favor, disfrute de su comida!")
+        elif question == "Carnitas":
+            print("¡Por favor, disfrute de su comida!")
+        elif question == "Pollo Asada":
+            print("¡Por favor, disfrute de su comida!")
+    if preference == "American":
+        print(American)
+        question = input("Please select one of the following dishes on the menu: ")
+        print(question)
+        if question =="Hamburger":
+            print("Please enjoy your meal!")
+        elif question =="Hot Dog":
+            print("Please enjoy your meal!")
+        elif question == "Chicken Tenders":
+            print("Please enjoy your meal!")
+        elif question == "French Fries":
+            print("Please enjoy your meal!")
+        elif question =="Apple Pie":
+            print("Please enjoy your meal!")
+            
+    keepGoing = input("Would you like to try again? Y/N")
+    
+    if not keepGoing =='Y' or keepGoing == 'y':
+        again = False
+    
+print("""/$$$$$$$  /$$     /$$ /$$$$$$$$       /$$$$$$$  /$$     /$$ /$$$$$$$$ /$$ /$$
+| $$__  $$|  $$   /$$/| $$_____/      | $$__  $$|  $$   /$$/| $$_____/| $$| $$
+| $$  \ $$ \  $$ /$$/ | $$            | $$  \ $$ \  $$ /$$/ | $$      | $$| $$
+| $$$$$$$   \  $$$$/  | $$$$$         | $$$$$$$   \  $$$$/  | $$$$$   | $$| $$
+| $$__  $$   \  $$/   | $$__/         | $$__  $$   \  $$/   | $$__/   |__/|__/
+| $$  \ $$    | $$    | $$            | $$  \ $$    | $$    | $$              
+| $$$$$$$/    | $$    | $$$$$$$$      | $$$$$$$/    | $$    | $$$$$$$$ /$$ /$$
+|_______/     |__/    |________/      |_______/     |__/    |________/|__/|__/
+                                                                              """)</pre>
+			</div>
+			<h3>Technologies Used:</h3>
+				<p>I used the Python programming language to build the application. </p>
+			<h3>Features Implemented:</h3>
+				<p>The menu project opens with a welcoming “Welcome!” message for new users and then gives them a choice between 5 different food categories: Korean, Japanese, Italian, Mexican, and American. Users will select their preference of the type of food and receive a menu based on their selection. Then they will select a food from their menu and get the message "Please enjoy your meal!", but in a different language (depending on preference) and an emoji unique to the chosen food. If the user inputs an item that does not match with any of the options available, they will be asked if they would like to try again. </p>
+			<h3>Challenges Faced:</h3>
+				<p>I had much difficulty with applying my lists into my if-else loops and implementing the random.choice() into my project. I also had trouble with temporary variables and had to research programming techniques to solve these issues.</p>
+			<h3>Learning and Achievements:</h3>
+				<p>Through this project, I was able to become comfortable with coding the basics of Python, especially with input functions and if-else loops.</p>
+			<h3>Future Enhancements:</h3>
+				<p>In the future, I want to implement for loops that could animate the Welcome sign and the Bye Bye sign or even add an extra step where I serve the user their food and it gives them an image of the food they ordered. I also want to make the menu more colorful. </p>
+			<h3>Conclusion:</h3>
+				<p>This project was a way for me to test how comfortable I am with some of the basic mechanisms of Python and to apply it to something that would happen in real life. </p>
+
+
+	
+</body>
+</html>
