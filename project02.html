@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>Daniel Park | Student Page </title>
+
+	<meta charset="UTF-8">
+		<meta name="description" content="Daniel's Student Page">
+		<meta name="keywords" content="HTML, CSS, Python, Responsive, Daniel">
+		<meta name="author" content="Daniel">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+	body {
+		margin: 0px;
+		font-family: "Louis George Cafe",Ariel,sans-serif;
+	}
+
+	h2{
+		color: darkslateblue;
+	}
+	h3{
+		color: darkslateblue;
+	}
+	img
+
+	{
+		width: auto;
+		height:  100px;
+	}
+
+	strong
+	{
+		background-color: #F26b8a
+		color:  white;
+		text-align:  center;
+		padding:  5px 5px;
+	}
+
+		#container {
+			width: 800px;
+			margin: 0 auto;
+		}
+		#row1 {
+			text-align: center;
+			background-color: #6f7d99;
+			color:  white;
+			padding: 5px;
+		}
+
+		#row2{
+			background-color: #becedd;
+			padding: 10px;
+		}
+
+		#row3{
+			background-color: #d8e5ed;
+		}
+
+
+		.col1 {
+			float: left;
+			width: 360px;
+			height: auto;
+			padding: 10px 20px;
+		}	
+
+		.col2 {
+			float: right;
+			width: 360px;
+			height: 100%;
+
+			padding: 10px 20px;
+		}
+
+	.clearfloat{
+		clear:  both;
+	}
+
+	.profile {
+			float: left;
+			border: 3px solid white;
+			margin: 5px;
+			height: auto;
+			width: 250px;
+			overflow: hidden;
+		}
+
+		@media(max-width: 767px) {
+		
+		img {
+			height: auto;
+			width: 50%;
+		}
+		#container {
+			width: 70%;
+			margin: 0 auto;
+			background-color: #82DCFA;
+			text-align: left;
+		}
+		
+		.col1 {
+			float: none;
+			width: 90%;
+		}	
+		.col2 {
+			float: none;
+			width: 90%;
+		}
+		.activity {
+			float: none;
+		}
+		}
+
+</style>
+
+</head>
+<body>
+
+<div id="container">
+	<div id="row1">
+			<!-- h1 tag -->
+		<h1>Project 02: Pokemon Name Translator</h1>
+
+	</div>
+
+	<div class="clearfloat"></div>
+
+
+	<div id="row2">
+			<h2>Project Description:</h2>
+				<p>My project is a dictionary that translates Pokemons’ English names into their Japanese names. The goal of this project is to get more familiar with dictionary data structure in Python.  </p>
+
+			<div style="height:300px;width:auto;overflow:auto;background-color:#404040	;color:white;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+				<pre>print("""
+ __      __       .__                                  __             __  .__             __________       __              .___              
+/  \    /  \ ____ |  |   ____  ____   _____   ____   _/  |_  ____   _/  |_|  |__   ____   \______   \____ |  | __ ____   __| _/____ ___  ___ 
+\   \/\/   // __ \|  | _/ ___\/  _ \ /     \_/ __ \  \   __\/  _ \  \   __\  |  \_/ __ \   |     ___/  _ \|  |/ // __ \ / __ |/ __ \\  \/  / 
+ \        /\  ___/|  |_\  \__(  <_> )  Y Y  \  ___/   |  | (  <_> )  |  | |   Y  \  ___/   |    |  (  <_> )    <\  ___// /_/ \  ___/ >    <  
+  \__/\  /  \___  >____/\___  >____/|__|_|  /\___  >  |__|  \____/   |__| |___|  /\___  >  |____|   \____/|__|_ \\___  >____ |\___  >__/\_ \ 
+       \/       \/          \/            \/     \/                            \/     \/                       \/    \/     \/    \/      \/ 
+""")
+is_valid = True
+again = True
+while(again):
+    
+    x = input("From Pokedex entries #001 - #050, which Pokemon name would you like to translate? ")
+    if x.upper() == "HELP":
+        print("Type Charmander and you will be able to escape")
+        continue
+    pokemon_names = {"Bulbasaur": "Fushigidane", "Ivysaur": "Fushigisō", "Venusaur": "Fushigibana", "Charmander": "Hitokage", "Charmeleon": "Rizārdo", "Charizard": "Rizādon", "Squirtle": "Zenigame", "Wartortle": "Kamēru", "Blastoise": "Kamekkusu", "Caterpie": "Kyatapi", "Metapod": "Toranseru", "Butterfree": "Batafuri", "Weedle": "Bīdoru", "Kakuna":"Kokūn", "Beedrill": "Supiā", "Pidgey": "Poppo", "Pidgeotto": "Pijon", "Pidgeot": "Pijotto", "Rattata": "Koratta", "Raticate": "Ratta", "Spearow": "Onidoriru", "Ekans": "Ābo", "Arbok": "Ābokku", "Pikachu": "Pikachū", "Raichu":"Raichū", "Sandshrew": "Sando", "Sandslash": "Sandopan", "Nidoran♀": "Nidoran Mesu", "Nidorina": "Nidorīna", "Nidoqueen": "Nidokuin", "Nidoran♂": "Nidoran Osu", "Nidorino": "Nidorīno", "Nidoking": "Nidokingu", "Clefairy": "Pippi", "Clefable": "Pikushī", "Vulpix": "Rokon", "Ninetales": "Kyūkon", "Jigglypuff": "Purin", "Wigglytuff": "Pukurin", "Zubat": "Zubatto", "Golbat": "Gorubatto", "Oddish": "Nazonokusa", "Gloom": "Kusaihana", "Vileplume": "Rafureshia", "Paras": "Parasu", "Parasect": "Parasekuto", "Venonat": "Konpan", "Venomoth": "Morufon", "Diglett":"Diguda"}
+    for eng_name, j_name in pokemon_names.items():
+        if x.upper() == eng_name.upper():
+            is_valid = True
+            print("English name:", eng_name)
+            print("Japanese name:", j_name)
+            break
+        else:
+            is_valid = False
+    if is_valid == False:
+        print("Sorry, that name hasn't been registered into the database.")
+    y = input("Would you like to play again? Y/N")
+    if y.upper() == "Y":
+        again = True 
+    else:
+        again = False
+print("""
+
+  ________                  .______.                  ___________                       .___             .__    .__._. 
+ /  _____/  ____   ____   __| _/\_ |__ ___.__. ____   \__    ___/___   _____   ____   __| _/____    ____ |  |__ |__| | 
+/   \  ___ /  _ \ /  _ \ / __ |  | __ <   |  |/ __ \    |    | /  _ \ /     \ /  _ \ / __ |\__  \ _/ ___\|  |  \|  | | 
+\    \_\  (  <_> |  <_> ) /_/ |  | \_\ \___  \  ___/    |    |(  <_> )  Y Y  (  <_> ) /_/ | / __ \\  \___|   Y  \  |\| 
+ \______  /\____/ \____/\____ |  |___  / ____|\___  >   |____| \____/|__|_|  /\____/\____ |(____  /\___  >___|  /__|__     ,___          .-;'
+       `"-.`\_...._/`.` 
+    ,      \        /
+ .-' ',    / ()   ()\
+`'._   \  /()    .  (|
+    > .' ;,     -'-  /
+   / <   |;,     __.;
+   '-.'-.|  , \    , \
+      `>.|;, \_)    \_)
+       `-;     ,    /
+          \    /   <
+           '. <`'-,_)         
+            '._)
+""")
+</pre>
+			</div>
+			<h3>Technologies Used:</h3>
+				<p>I used the Python programming language to build the application. </p>
+			<h3>Features Implemented:</h3>
+				<p>The menu project opens with a welcoming “Welcome!” message for new users and asks them to give a Pokemon name to translate. The available Pokemon names in the dictionary include the first 50 Pokedex entries of the first generation Pokemon. If the user enters in one of these names, the translator will output the Japanese (romanized) name of the Pokemon. There is one hidden help feature for the user to stumble upon. Afterwards, the user is asked if they want to play again and if they agree, they will be asked to give another Pokemon name. If they do not, they will be exited out of the program and be given the warm “Goodbye Tomodachi!” message. </p>
+			<h3>Challenges Faced:</h3>
+				<p>I had much difficulty with knowing when to apply the break and continue keywords and integrating boolean values into my loops and if statements. </p>
+			<h3>Learning and Achievements:</h3>
+				<p>Through this project, I was able to become comfortable with coding with dictionaries and for loops. </h3>
+				<p>In the future, I want to implement for loops that could animate the Welcome sign and the Bye Bye sign. I also want to implement a hidden function that would direct the user to a special surprise. </p>
+			<h3>Conclusion:</h3>
+				<p>This project was a way for me to test how comfortable I am with using dictionaries, dictionary methods, booleans, and advanced loop controls.  </p>
+
+
+	
+</body>
+</html>
