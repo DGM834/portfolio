@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>Daniel Park | Student Page </title>
+
+	<meta charset="UTF-8">
+		<meta name="description" content="Daniel's Student Page">
+		<meta name="keywords" content="HTML, CSS, Python, Responsive, Daniel">
+		<meta name="author" content="Daniel">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+	body {
+		margin: 0px;
+		font-family: "Louis George Cafe",Ariel,sans-serif;
+	}
+
+	h2{
+		color: darkslateblue;
+	}
+	h3{
+		color: darkslateblue;
+	}
+	img
+
+	{
+		width: auto;
+		height:  100px;
+	}
+
+	strong
+	{
+		background-color: #F26b8a
+		color:  white;
+		text-align:  center;
+		padding:  5px 5px;
+	}
+
+		#container {
+			width: 800px;
+			margin: 0 auto;
+		}
+		#row1 {
+			text-align: center;
+			background-color: #6f7d99;
+			color:  white;
+			padding: 5px;
+		}
+
+		#row2{
+			background-color: #becedd;
+			padding: 10px;
+		}
+
+		#row3{
+			background-color: #d8e5ed;
+		}
+
+
+		.col1 {
+			float: left;
+			width: 360px;
+			height: auto;
+			padding: 10px 20px;
+		}	
+
+		.col2 {
+			float: right;
+			width: 360px;
+			height: 100%;
+
+			padding: 10px 20px;
+		}
+
+	.clearfloat{
+		clear:  both;
+	}
+
+	.profile {
+			float: left;
+			border: 3px solid white;
+			margin: 5px;
+			height: auto;
+			width: 250px;
+			overflow: hidden;
+		}
+
+		@media(max-width: 767px) {
+		
+		img {
+			height: auto;
+			width: 50%;
+		}
+		#container {
+			width: 70%;
+			margin: 0 auto;
+			background-color: #82DCFA;
+			text-align: left;
+		}
+		
+		.col1 {
+			float: none;
+			width: 90%;
+		}	
+		.col2 {
+			float: none;
+			width: 90%;
+		}
+		.activity {
+			float: none;
+		}
+		}
+
+</style>
+
+</head>
+<body>
+
+<div id="container">
+	<div id="row1">
+			<!-- h1 tag -->
+		<h1>Project 03: Analyzing US History Midterm Exam Data</h1>
+
+	</div>
+
+	<div class="clearfloat"></div>
+
+
+	<div id="row2">
+			<h2>Introduction:</h2>
+				<p>During this project, we looked at the data of 25 students from a US History class from  Joanna Yoo High School, which gave us details about their name, grade, score on the midterm, and whether US History was their favorite subject or not. This project was all about practicing data analysis using Python library, numpy, classes, and json files. </p>
+			<h3>JSON Data</h3>
+			<div style="height:300px;width:auto;overflow:auto;background-color:#404040	;color:white;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+				<pre>
+ [
+  {
+    "name": "bob",
+    "grade": "10",
+    "testscore": "87",
+    "fav_subject": "no"
+  },
+  {
+    "name": "alice",
+    "grade": "12",
+    "testscore": "70",
+    "fav_subject": "no"
+  },
+  {
+    "name": "charlie",
+    "grade": "11",
+    "testscore": "75",
+    "fav_subject": "no"
+  },
+  {
+    "name": "david",
+    "grade": "10",
+    "testscore": "99",
+    "fav_subject": "yes"
+  },
+  {
+    "name": "eve",
+    "grade": "12",
+    "testscore": "98",
+    "fav_subject": "no"
+  },
+  {
+    "name": "frank",
+    "grade": "9",
+    "testscore": "92",
+    "fav_subject": "yes"
+  },
+  {
+    "name": "grace",
+    "grade": "11",
+    "testscore": "67",
+    "fav_subject": "no"
+  },
+  {
+    "name": "hannah",
+    "grade": "10",
+    "testscore": "92",
+    "fav_subject": "yes"
+  },
+  {
+    "name": "ian",
+    "grade": "12",
+    "testscore": "81",
+    "fav_subject": "no"
+  },
+  {
+    "name": "jane",
+    "grade": "9",
+    "testscore": "78",
+    "fav_subject": "no"
+  },
+  {
+    "name": "kevin",
+    "grade": "11",
+    "testscore": "100",
+    "fav_subject": "yes"
+  },
+  {
+    "name": "lucy",
+    "grade": "12",
+    "testscore": "73",
+    "fav_subject": "no"
+  },
+  {
+    "name": "megan",
+    "grade": "10",
+    "testscore": "99",
+    "fav_subject": "yes"
+  },
+  {
+    "name": "nathan",
+    "grade": "11",
+    "testscore": "84",
+    "fav_subject": "no"
+  },
+  {
+    "name": "olivia",
+    "grade": "9",
+    "testscore": "79",
+    "fav_subject": "no"
+  },
+  {
+    "name": "peter",
+    "grade": "10",
+    "testscore": "98",
+    "fav_subject": "yes"
+  },
+  {
+    "name": "quinn",
+    "grade": "12",
+    "testscore": "68",
+    "fav_subject": "no"
+  },
+  {
+    "name": "ryan",
+    "grade": "11",
+    "testscore": "86",
+    "fav_subject": "no"
+  },
+  {
+    "name": "sophia",
+    "grade": "9",
+    "testscore": "77",
+    "fav_subject": "no"
+  },
+  {
+    "name": "thomas",
+    "grade": "10",
+    "testscore": "90",
+    "fav_subject": "yes"
+  },
+  {
+    "name": "ursula",
+    "grade": "12",
+    "testscore": "42",
+    "fav_subject": "no"
+  },
+  {
+    "name": "victor",
+    "grade": "11",
+    "testscore": "55",
+    "fav_subject": "no"
+  },
+  {
+    "name": "wendy",
+    "grade": "9",
+    "testscore": "76",
+    "fav_subject": "no"
+  },
+  {
+    "name": "xander",
+    "grade": "10",
+    "testscore": "93",
+    "fav_subject": "yes"
+  },
+  {
+    "name": "yasmine",
+    "grade": "11",
+    "testscore": "80",
+    "fav_subject": "no"
+  }
+]
+				</pre>
+			</div>
+			<h3>Code</h3>
+			<div style="height:300px;width:auto;overflow:auto;background-color:#404040	;color:white;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+				<pre>
+import json
+import numpy
+
+#i am defining a class to represent each student's data
+class Student:
+# this is a constructor with 4 arguments
+    def __init__(self,name,grade, testscore, fav_subject):
+        self.name= name
+        self.grade = grade
+        self.testscore = testscore
+        self.fav_subject = fav_subject
+#here i am reading the json data nd loading it into the json_data variable
+with open('student.json') as student_json:
+    json_data = json.load(student_json)
+
+
+
+#I am creating a list of student objects
+students = []
+for data in json_data:
+    student = Student(data['name'], int(data['grade']), int(data['testscore']), data['fav_subject'])
+    students.append(student)
+   # print(student.name) -- works! // gets students name
+total_score = []
+fav_students_total_score = []
+not_fav_students_total_score = []
+g9_total_score = []
+g10_total_score = []
+g11_total_score = []
+g12_total_score = []
+for student in students:
+    total_score.append(student.testscore)
+    if student.fav_subject == "yes":
+        fav_students_total_score.append(student.testscore)
+    else:
+        not_fav_students_total_score.append(student.testscore)
+    if student.grade == 9:
+        g9_total_score.append(student.testscore)
+    if student.grade == 10:
+        g10_total_score.append(student.testscore)
+    if student.grade == 11:
+        g11_total_score.append(student.testscore)
+    if student.grade == 12:
+        g12_total_score.append(student.testscore)
+   
+
+
+
+#avg_stuff
+avg_class_score = numpy.mean(total_score)
+median_class_score = numpy.median(total_score)
+print("The total number of students is:", len(students))
+print("The total class mean was:", avg_class_score)
+print("The total class median was:", median_class_score)
+avg_fav_mean_score = numpy.mean(fav_students_total_score)
+avg_not_fav_mean_score = numpy.mean(not_fav_students_total_score)
+print("The average score for students whose favorite class was US History was:", avg_fav_mean_score)
+print("The average score for students whose favorite class was not US History was:", avg_not_fav_mean_score)
+avg_9_score = numpy.mean(g9_total_score)
+avg_10_score = numpy.mean(g10_total_score)
+avg_11_score = numpy.mean(g11_total_score)
+avg_12_score = numpy.mean(g12_total_score)
+print("The average score for freshmen was:", avg_9_score)
+print("The average score for sophomores was:", avg_10_score)
+print('The average score for juniors was:', avg_11_score)
+print('The average score for seniors was:', avg_12_score)
+
+				</pre>
+			</div>
+			<h3>Task 1: Analyzing Class Performance</h3>
+				<p>For Task 1, we calculated the mean and median score of the midterm exam for all 25 students in the US History class. The results showed that the total class mean was 81.56%, while the total class median was 81%. This means that most students got a score that was close to 81%. Also, the median and the mean were both very similar, meaning that there were not many outliers within the class.</h3>
+
+			<h3>Task 2: Analyzing Students' Favorite Subjects</h3>
+				<p>For Task 2, we calculated and compared the average scores of those who considered US History their favorite subject. The results showed that the average score for students whose favorite subject was US History was 95.375%, while the average score for students whose favorite subject was not US History was 75.05882352941178%; students who really enjoyed US History usually did better than those who did not. Additionally, students who listed US History as their favorite subject usually did much better than the class average, while students whose favorite subject was not US History did worse than the class average.</h3>
+
+			<h3>Task 3: Analyzing Performance by Grade</h3>
+				<p>For Task 3, we calculated and compared the average scores of different grade levels who took the midterm exam. The results showed that the average score for freshmen was 80.4%, the average score for sophomores was 94.0%, the average score for juniors was about 78.1%, and the average score for seniors was 72.0%. The juniors and seniors did noticeably worse on the midterm than their younger peers, while the sophomores did much better than everyone else.</h3>
+
+			<h3>Conclusion:</h3>
+				<p>In Task 1, we found that the class average was 81.56% and the class median was 81%. For Task 2, we found that the average score of students whose favorite subject was US History was higher than both the average score of students whose favorite subject was not US History and the class average. Also, the average score of students who did not list US History as their favorite subject was lower than the class average. In Task 3, we found that, on average, sophomores did the best in the exam, then freshmen, then juniors, and lastly seniors.  </p>
+			<h3>Recommendations (if applicable):</h3>
+				<p>Using the results from the data, it can be recommended that seniors need extra help in US History. This can be supplemented by pairing seniors and sophomores together during group activities and making sure seniors either show up to class or are not asleep during class. However, the lower grades for juniors and seniors can also be attributed to time spent studying for college-entrance exams, such as the SAT or ACT. Also, as people whose favorite subject was US History tend to do much better in the exams, it can be recommended that they take AP US History next year. However, this project is limited by the fact that the dataset is so small, meaning that results may not be accurate on a larger scale. </p>
+		
+
+
+	
+</body>
+</html>
