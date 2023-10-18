@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>Daniel Park | Student Page </title>
+
+	<meta charset="UTF-8">
+		<meta name="description" content="Daniel's Student Page">
+		<meta name="keywords" content="HTML, CSS, Python, Responsive, Daniel">
+		<meta name="author" content="Daniel">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+	body {
+		margin: 0px;
+		font-family: "Louis George Cafe",Ariel,sans-serif;
+	}
+
+	h2{
+		color: darkslateblue;
+	}
+	h3{
+		color: darkslateblue;
+	}
+	img
+
+	{
+		width: auto;
+		height:  100px;
+	}
+
+	strong
+	{
+		background-color: #F26b8a
+		color:  white;
+		text-align:  center;
+		padding:  5px 5px;
+	}
+
+		#container {
+			width: 800px;
+			margin: 0 auto;
+		}
+		#row1 {
+			text-align: center;
+			background-color: #6f7d99;
+			color:  white;
+			padding: 5px;
+		}
+
+		#row2{
+			background-color: #becedd;
+			padding: 10px;
+		}
+
+		#row3{
+			background-color: #d8e5ed;
+		}
+
+
+		.col1 {
+			float: left;
+			width: 360px;
+			height: auto;
+			padding: 10px 20px;
+		}	
+
+		.col2 {
+			float: right;
+			width: 360px;
+			height: 100%;
+
+			padding: 10px 20px;
+		}
+
+	.clearfloat{
+		clear:  both;
+	}
+
+	.profile {
+			float: left;
+			border: 3px solid white;
+			margin: 5px;
+			height: auto;
+			width: 250px;
+			overflow: hidden;
+		}
+
+		@media(max-width: 767px) {
+		
+		img {
+			height: auto;
+			width: 50%;
+		}
+		#container {
+			width: 70%;
+			margin: 0 auto;
+			background-color: #82DCFA;
+			text-align: left;
+		}
+		
+		.col1 {
+			float: none;
+			width: 90%;
+		}	
+		.col2 {
+			float: none;
+			width: 90%;
+		}
+		.activity {
+			float: none;
+		}
+		}
+
+</style>
+
+</head>
+<body>
+
+<div id="container">
+	<div id="row1">
+			<!-- h1 tag -->
+		<h1>Project 04: Trivia Quiz</h1>
+
+	</div>
+
+	<div class="clearfloat"></div>
+
+
+	<div id="row2">
+			<h2>Project Description:</h2>
+				<p>This project simulated a 12-question quiz based on countries and their geographic and cultural significance. The goal of this project was to show off my skills in using loops, functions, and dictionaries in Python3.</p>
+			
+			<div style="height:300px;width:auto;overflow:auto;background-color:#404040	;color:white;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+				<pre>
+questions = [
+    # this is the start of a list
+    {
+        "question": "Where is France?",
+        "options": ["A. Next to Germany","B. Next to Japan","C. In Japan", "D. North America"],
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of France?",
+        "options": ["A. Madagascar", "B. Paris", "C. Amor", "D. Croissant"],
+        "answer": "B"
+    },
+    {
+        "question":"Where is the capital of France?",
+        "options": ["A. Île-de-France", "B. Chamonix-Mont-Blanc", "C. Venice", "D. Florence"],
+        "answer": "A"
+    },
+    {
+        "question": "What country does Puerto Rico belong to?",
+        "options": ["A. Madagascar", "B. Guam", "C. United States of America", "D. Central America"],
+        "answer": "C"
+    },
+    {
+        "question": "Which countries did not ally with Germany during World War 1",
+        "options": ["A. Austria-Hungary", "B. Ottoman Empire", "C. Italy", "D. Bulgaria"],
+        "answer": "C"
+    },
+    {
+        "question": "The following is a true or false question: I want to go to Austria",
+        "options": ["A. True", "B. False"],
+        "answer": "A"
+    },
+    {
+        "question": "How many colors are on the German Flag?",
+        "options": ["A. 1", "B. 2", "C. 3", "D. 4"],
+        "answer": "C"  
+    },
+    {
+        "question": "What country is K-Pop from?",
+        "options": ["A. Kazakhstan", "B. Keshikabob", "C. Kenya", "D. Korea"],
+        "answer": "D"
+    },
+    {
+        "question": "What is the continent known for being very cold?",
+        "options": ["A. Greenland", "B. Antarctica", "C. Russia", "D. Europe"],
+        "answer": "B"
+    },
+    {
+        "question": "What is country was Hanni Pham born in?",
+        "options": ["A. Madagascar", "B. Paris", "C. Vietnam", "D. Australia"],
+        "answer": "D"
+    },
+    {
+        "question": "What country was Joanna Teacher born in?",
+        "options": ["A. South Sudan", "B. Germany", "C. Iraq", "D. Korea"],
+        "answer": "B"
+    },
+    {
+        "question": "What country invented French Fries?",
+        "options": ["A. France", "B. Belgium", "C. America", "D. Denmark"],
+        "answer": "B"
+    }
+]  # this is the end of the list
+
+score = 0
+
+# this function will display the question and options and return the user's answer
+def quiz(question):
+    print(question["question"])
+    for option in question["options"]:
+        print(option)
+    answer = input("Enter your answer choice: ").upper()
+    return answer
+
+#main game
+for question in questions:
+    user_answer = quiz(question)
+    if user_answer == question["answer"]:
+        print("You are correct!")
+        score += 1
+    else:
+        print("You are wrong. Too bad. Haha")
+print("Good job, you ended with a final score of", score, "out of", len(questions))
+
+				</pre>
+			</div>
+			<h3>Technologies Used:</h3>
+				<p>I used the Python programming language to build the application.</p>
+
+			<h3>Features Implemented:</p>
+				<p>This project is a multiple choice quiz with 12 questions. Each question and its options, A/B/C/D, are displayed to the user. The user must input their answer choice and if their answer is correct, they will be congratulated and their score will go up by 1. If they are incorrect, they will be told they are wrong and move on to the next question. At the end of the quiz, the program will display the total score to the user.</p>
+
+			<h3>Challenges Faced:</h3>
+				<p>Though I had an easier time with this project than the previous ones, I still struggled with indexing dictionaries and using them in for loops. I also struggled with making use of the .upper() method.</p>
+
+      <h3>Learning and Achievements:</p>
+        <p>Through this project I was able to become more comfortable with using for loops and functions in more situations, such as utilizing functions inside a for loop, alongside dictionary indexes.</p>
+
+      <h3>Future Enhancements:</h3>
+        <p>In the future I hope to implement a way to give users a second chance on questions if they get it wrong and to randomize the order of the questions and options. I also want to have more question options to choose from and then randomize what questions will be given to the user.</p>
+
+      <h3>Conclusion:</h3>
+        <p>This project was a way for me to test how comfortable I am with using dictionaries, for loops, and functions.</p>
+
+			
+		
+
+
+	
+</body>
+</html>
